@@ -1,0 +1,196 @@
+{
+  "dataset": {
+    "rows": 100492,
+    "frauds": 492,
+    "prevalence": 0.0048959121124069575,
+    "train_rows": 60295,
+    "val_rows": 20098,
+    "test_rows": 20099,
+    "test_prevalence": 0.0049256181899596995,
+    "test_frauds": 99
+  },
+  "thresholds_on_validation": {
+    "best_f1": {
+      "threshold": 0.98,
+      "f1": 0.7649769585253456,
+      "precision": 0.6974789915966386,
+      "recall": 0.8469387755102041
+    },
+    "recall90": {
+      "threshold": 0.59,
+      "precision": 0.189873417721519,
+      "recall": 0.9183673469387755
+    }
+  },
+  "recall90_threshold": {
+    "threshold": 0.59,
+    "precision": 0.189873417721519,
+    "recall": 0.9183673469387755
+  },
+  "dummy_all_negative": {
+    "accuracy": 0.9950743818100403,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "roc_auc": 0.5,
+    "pr_auc": 0.0049256181899596995,
+    "tp": 0,
+    "fp": 0,
+    "tn": 20000,
+    "fn": 99
+  },
+  "approaches": {
+    "baseline": {
+      "metrics": {
+        "accuracy": 0.998905418180009,
+        "precision": 0.9753086419753086,
+        "recall": 0.797979797979798,
+        "f1": 0.8777777777777778,
+        "roc_auc": 0.982679797979798,
+        "pr_auc": 0.8985303204823446,
+        "tp": 79,
+        "fp": 2,
+        "tn": 19998,
+        "fn": 20
+      },
+      "threshold": 0.5,
+      "per_1000": {
+        "frauds_per_1000": 4.9,
+        "caught_per_1000": 3.9,
+        "missed_per_1000": 1.0,
+        "false_alarms_per_1000": 0.1
+      }
+    },
+    "class_weight": {
+      "metrics": {
+        "accuracy": 0.9745758495447535,
+        "precision": 0.15436241610738255,
+        "recall": 0.9292929292929293,
+        "f1": 0.2647482014388489,
+        "roc_auc": 0.9816517676767677,
+        "pr_auc": 0.8688794591683295,
+        "tp": 92,
+        "fp": 504,
+        "tn": 19496,
+        "fn": 7
+      },
+      "threshold": 0.5,
+      "per_1000": {
+        "frauds_per_1000": 4.9,
+        "caught_per_1000": 4.6,
+        "missed_per_1000": 0.3,
+        "false_alarms_per_1000": 25.1
+      }
+    },
+    "smote": {
+      "metrics": {
+        "accuracy": 0.9815911239365143,
+        "precision": 0.2021978021978022,
+        "recall": 0.9292929292929293,
+        "f1": 0.33212996389891697,
+        "roc_auc": 0.9828222222222223,
+        "pr_auc": 0.8738752905071534,
+        "tp": 92,
+        "fp": 363,
+        "tn": 19637,
+        "fn": 7
+      },
+      "threshold": 0.5,
+      "per_1000": {
+        "frauds_per_1000": 4.9,
+        "caught_per_1000": 4.6,
+        "missed_per_1000": 0.3,
+        "false_alarms_per_1000": 18.1
+      }
+    },
+    "undersample": {
+      "metrics": {
+        "accuracy": 0.9671625454002687,
+        "precision": 0.12348993288590604,
+        "recall": 0.9292929292929293,
+        "f1": 0.21800947867298578,
+        "roc_auc": 0.9807444444444444,
+        "pr_auc": 0.7494806179461871,
+        "tp": 92,
+        "fp": 653,
+        "tn": 19347,
+        "fn": 7
+      },
+      "threshold": 0.5,
+      "per_1000": {
+        "frauds_per_1000": 4.9,
+        "caught_per_1000": 4.6,
+        "missed_per_1000": 0.3,
+        "false_alarms_per_1000": 32.5
+      }
+    },
+    "threshold_tuned": {
+      "metrics": {
+        "accuracy": 0.998208866112742,
+        "precision": 0.7889908256880734,
+        "recall": 0.8686868686868687,
+        "f1": 0.8269230769230769,
+        "roc_auc": 0.9816517676767677,
+        "pr_auc": 0.8688794591683295,
+        "tp": 86,
+        "fp": 23,
+        "tn": 19977,
+        "fn": 13
+      },
+      "threshold": 0.98,
+      "per_1000": {
+        "frauds_per_1000": 4.9,
+        "caught_per_1000": 4.3,
+        "missed_per_1000": 0.6,
+        "false_alarms_per_1000": 1.1
+      }
+    },
+    "recall90": {
+      "metrics": {
+        "accuracy": 0.9814916164983333,
+        "precision": 0.2,
+        "recall": 0.9191919191919192,
+        "f1": 0.3285198555956679,
+        "roc_auc": 0.9816517676767677,
+        "pr_auc": 0.8688794591683295,
+        "tp": 91,
+        "fp": 364,
+        "tn": 19636,
+        "fn": 8
+      },
+      "threshold": 0.59,
+      "per_1000": {
+        "frauds_per_1000": 4.9,
+        "caught_per_1000": 4.5,
+        "missed_per_1000": 0.4,
+        "false_alarms_per_1000": 18.1
+      }
+    }
+  },
+  "noise_robustness_5pct_label_flip": {
+    "baseline": {
+      "f1_clean": 0.8777777777777778,
+      "f1_noisy": 0.8522727272727273,
+      "pr_auc_clean": 0.8985303204823446,
+      "pr_auc_noisy": 0.8741767817639997
+    },
+    "class_weight": {
+      "f1_clean": 0.2647482014388489,
+      "f1_noisy": 0.046,
+      "pr_auc_clean": 0.8688794591683295,
+      "pr_auc_noisy": 0.8670308322802234
+    },
+    "smote": {
+      "f1_clean": 0.33212996389891697,
+      "f1_noisy": 0.02466270129116495,
+      "pr_auc_clean": 0.8738752905071534,
+      "pr_auc_noisy": 0.8096508168653467
+    },
+    "undersample": {
+      "f1_clean": 0.21800947867298578,
+      "f1_noisy": 0.03380961964177903,
+      "pr_auc_clean": 0.7494806179461871,
+      "pr_auc_noisy": 0.8107811296422096
+    }
+  }
+}

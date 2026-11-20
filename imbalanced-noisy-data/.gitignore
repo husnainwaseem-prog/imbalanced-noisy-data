@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+results/probas.npz
+data/creditcard_full.csv
